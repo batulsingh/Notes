@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg3000" viewBox="0 0 832.56 832.56" version="1.1">
+  <defs id="defs3002">
+    <filter id="filter3960" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur3962" stdDeviation="15.192694"/>
+    </filter>
+    <linearGradient id="linearGradient3972" x1="-751.55" gradientUnits="userSpaceOnUse" x2="-747.51" y1="1379.7" y2="401.81">
+      <stop id="stop3968" stop-color="#fd5" offset="0"/>
+      <stop id="stop3970" stop-color="#fea" offset="1"/>
+    </linearGradient>
+    <filter id="filter4008" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur4010" stdDeviation="3.5770763"/>
+    </filter>
+    <filter id="filter4022" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur4024" stdDeviation="1.7885381"/>
+    </filter>
+    <linearGradient id="linearGradient3053" y2="1213.5" gradientUnits="userSpaceOnUse" x2="-488.91" y1="1294.8" x1="-414.67">
+      <stop id="stop4028" stop-color="#fd5" offset="0"/>
+      <stop id="stop4034" stop-color="#fea" offset=".5"/>
+      <stop id="stop4030" stop-color="#fd5" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="layer1" transform="translate(18.855 -18.928)">
+    <g id="g4036" transform="translate(1092.5 -570.59)">
+      <rect id="rect3958" height="759.63" filter="url(#filter3960)" width="759.63" y="625.98" x="-1074.9"/>
+      <rect id="rect3956" height="759.63" width="759.63" y="615.98" x="-1082.9" fill="url(#linearGradient3972)"/>
+      <rect id="rect3964" height="125.26" width="759.63" y="615.98" x="-1082.9" fill="#fea"/>
+      <path id="path3990" filter="url(#filter4008)" d="m-500.49 1197.6 0.0442 1.1932c17.96 57.277 21.099 118.21 9.3913 176.75l0.0442 0.9281 84.698-84.698 84.654-84.654c-59.071 11.942-120.6 8.7788-178.37-9.5018l-0.46401-0.022z"/>
+      <path id="rect3984" d="m-1082.9 615.97v759.66h591.31l168.31-168.28v-591.38h-759.62z" fill="url(#linearGradient3972)"/>
+      <path id="path4020" filter="url(#filter4022)" transform="matrix(.97306 0 0 .97306 -11.133 34.657)" d="m-502.63 1196.9 0.0442 1.1932c17.96 57.277 21.099 118.21 9.3913 176.75l0.0442 0.9281 84.698-84.698 84.654-84.654c-59.071 11.942-120.6 8.7788-178.37-9.5018l-0.46401-0.022z"/>
+      <path id="path3974" d="m-502.63 1196.9 0.0442 1.1932c17.96 57.277 21.099 118.21 9.3913 176.75l0.0442 0.9281 84.698-84.698 84.654-84.654c-59.071 11.942-120.6 8.7788-178.37-9.5018l-0.46401-0.022z" fill="url(#linearGradient3053)"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Sticky Note</dc:title>
+        <dc:date>2010-04-19T17:10:22</dc:date>
+        <dc:description>Sticky Note</dc:description>
+        <dc:source>http://openclipart.org/detail/48931/sticky-note-by-sheikh_tuhin</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>sheikh_tuhin</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>note</rdf:li>
+            <rdf:li>office</rdf:li>
+            <rdf:li>post-it</rdf:li>
+            <rdf:li>sticky note</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
