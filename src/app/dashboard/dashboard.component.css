@@ -1,0 +1,188 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+.shift-30 {
+    margin-top: 30px;
+}
+
+.form-field{
+    padding: auto;
+    display:block;
+    min-height: fit-content;
+}
+
+.app-footer {
+    margin-top: 0.75rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 92%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.example-card {
+    margin: 30px;
+    overflow: hidden;
+}
+
+.column {
+    float: left;
+    width: 31%;
+    padding: 0 10px;
+    height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.example-card {
+    margin: 20px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+#stepper {
+    width: 100%;
+}
+
+
+/* Navbar Image-logo */
+
+.logo-image {
+    background-image: url(../../assets/bulb-3656.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 57px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    outline: none;
+    cursor: pointer;
+}
+
+.app-header {
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+#writing {
+    margin-top: 20px;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+}
+
+#detail {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+img {
+    height: 300px;
+}
+
+.flex-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+mat-card-content {
+    font-size: 16px !important;
+}
+
+.notecard {
+    background-color:whitesmoke;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.row{
+    margin-top: 3rem;
+    height: 20rem;
+}
+
+.my-card{
+    margin-top: 0.5rem;
+}
+
+button{
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+    /* Changes button background colour */
+    /* background: #eb6b40; */
+    /* color: white; */
+    /* font-size: 18px;
+    line-height: 18px; */
+    height: 2.1rem;
+    width: 2.1rem;
+}
+
+.actionbuttons{
+    margin-left: 0.7rem;
+}
+
+.matCards{
+    position: relative;
+    top: -20rem;
+    bottom: -10rem;
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin-top: 2rem;
+    /* height: 30rem; */
+}
+
+.notemetadata{
+    margin-right: auto;
+    float: left;
+}
+
+.matrow{
+    margin-top: 4rem;
+}
+
+/* mat-toolbar{
+    color: #eb6b40;
+    background: #eb6b40;
+} */
+
+.mat-toolbar.mat-primary {
+    background: #007bff;
+    color: #fff;
+  }
+
+  .addNote{
+    margin-top: 1.5rem;
+    right: 0.5rem;
+    position: fixed;
+    z-index: 3;
+  }

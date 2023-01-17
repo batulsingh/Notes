@@ -1,0 +1,112 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+
+.herorow {
+    margin-top: 3.15rem;
+    /* padding-bottom: 0.5rem; */
+    position: relative;
+    height: 41.8rem;
+    overflow: hidden;
+    background: url(../../assets/hero-cover.jpg) no-repeat center;
+    background-size: 80rem;
+    opacity: 0.8;
+    top: -75px;
+}
+
+.app-footer {
+    margin-top: 0.75rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 92%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.column {
+    float: left;
+    width: 31%;
+    padding: 0 10px;
+    height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.column {
+    float: left;
+    width: 31%;
+    padding: 0 10px;
+    height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+#stepper {
+    width: 100%;
+}
+
+
+/* Navbar Image-logo */
+
+.logo-image {
+    background-image: url(../../assets/bulb-3656.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 57px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-button{
+    margin-right: 5%;
+}
+
+.app-header {
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+#writing {
+    margin-top: 20px;
+}
+
+#detail {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+img {
+    height: 300px;
+}
+
+.flex-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+mat-card-content {
+    font-size: 16px !important;
+}

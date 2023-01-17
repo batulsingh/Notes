@@ -1,0 +1,61 @@
+<!-- Start of nav bar -->
+<!-- Toolbar -->
+<div class="container-fluid">
+  <div class="row">
+    <mat-toolbar color="accent" class="app-header">
+      <div class="logo-image" routerLink=""> </div>
+      <div id="writing">
+          <p><strong> {{username}} </strong></p>
+      </div>
+      <span class="signout">
+        <a mat-raised-button (click)=logOut() color="primary" class="btn-block"><strong>Sign Out</strong></a>
+
+    </span>
+  </mat-toolbar>
+
+  <div class = "addNote">
+    <button mat-fab color="primary">
+      <mat-icon >add</mat-icon>
+  </button>
+  </div>
+</div>
+
+  <!-- <div class = "matCards"> -->
+    <div class="matrow">
+      <div class = "matCards" fxLayout="row wrap" *ngFor="let note of noteList">
+        <mat-card class="notecard">
+          <mat-card-content>
+            <mat-card-title>
+              <p>{{note.content}}</p>
+            </mat-card-title>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <div class = "notemetadata">
+              <!-- Uncomment this when notes support sharing feature-->
+              <!-- <mat-card-subtitle>{{note.creator}}</mat-card-subtitle> -->
+              <mat-card-subtitle>{{note.createdOn | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+            </div>
+            <div class = "actionbuttons">
+            <button mat-fab color="primary">
+                <mat-icon >edit</mat-icon>
+            </button>
+            <button mat-fab color="warn">
+                <mat-icon >delete</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  <!-- </div> -->
+
+  <!-- End of login div -->
+  <!-- <div class="row"> -->
+      <mat-toolbar color="accent" class="app-footer">
+          <!-- <div class="logo-image" routerLink=""> </div> -->
+          <!-- <div id="writing">
+              <p><strong> Save Your Thoughts </strong></p>
+          </div> -->
+      </mat-toolbar>
+  <!-- </div> -->
+</div>
