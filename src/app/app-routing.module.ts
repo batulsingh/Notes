@@ -14,8 +14,7 @@ const routes: Routes = [
       { path: '', component: LandingPageComponent },
       { path: 'login', component: LoginPageComponent },
       { path: 'register', component: RegisterPageComponent },
-      // { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGaurdService]}
-      { path: 'dashboard', component: DashboardComponent}
+      { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGaurdService]}
   ]
   }
 ];

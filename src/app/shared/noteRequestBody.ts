@@ -1,3 +1,3 @@
-export class NoteRequestBody {
+export class NoteCreateRequestBody {
     content: string | undefined;
 }

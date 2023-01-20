@@ -1,12 +1,15 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+
 .herorow {
-    margin-top: 3.15rem;
+    margin-top: 4rem;
     /* padding-bottom: 0.5rem; */
     position: relative;
-    height: 41.8rem;
+    height: 40rem;
     overflow: hidden;
     background: url(../../assets/hero-cover.jpg) no-repeat center;
-    background-size: 80rem;
-    opacity: 0.8;
+    background-size: 38rem;
+    opacity: 1;
     top: -75px;
 }
 
@@ -65,7 +68,7 @@
     height: 57px;
     border-radius: 50%;
     overflow: hidden;
-    margin-top: -6px;
+    margin-top: -0.1rem;
     outline: none;
     cursor: pointer;
 }

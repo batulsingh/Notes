@@ -30,17 +30,18 @@ export class AuthenticationService {
   ) { 
      }
 
-     authenticate(username: string, password: string) {
-      return this.httpClient.post<any>(this.url+'/authenticate',{username,password}).pipe(
-       catchError(this.errorHandler)
-      ).pipe(map(
-        userData => {
-         sessionStorage.setItem('username', username);
-         let tokenStr= 'Bearer '+ userData.token;
-         sessionStorage.setItem('token', tokenStr);
-         return userData;
-        }
-      ));
+     authenticate(username: string, password: string): Observable<any> {
+      return this.httpClient.post<any>(this.url+'/authenticate',{username,password})
+      // return this.httpClient.post<any>(this.url+'/authenticate',{username,password}).pipe(
+      //  catchError(this.errorHandler)
+      // ).pipe(map(
+      //   userData => {
+      //    sessionStorage.setItem('username', username);
+      //    let tokenStr= 'Bearer '+ userData.token;
+      //    sessionStorage.setItem('token', tokenStr);
+      //    return userData;
+      //   }
+      // ));
     }
 
     errorHandler(error:HttpErrorResponse){
@@ -56,15 +57,9 @@ export class AuthenticationService {
     }
   
 
-  isUserLoggedIn():boolean {
+  isUserLoggedIn():Observable<HttpResponse<any>> {
     
-    var res = this.httpClient.post<HttpResponse<any>>(this.url+'/login',null, {observe: 'response'})
-    .subscribe(
-      // catchError(this.errorHandler),
-      response => {
-      this.isValidUser = response.status == HttpStatusCode.Ok
-    })
-      return this.isValidUser && sessionStorage.getItem("token") != null
+    return this.httpClient.post<HttpResponse<any>>(this.url+'/login',null, {observe: 'response'})
   }
 
   logOut() {

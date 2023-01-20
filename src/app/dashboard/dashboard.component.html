@@ -1,7 +1,7 @@
 <!-- Start of nav bar -->
 <!-- Toolbar -->
 <div class="container-fluid">
-  <div class="row">
+  <!-- <div class="row"> -->
     <mat-toolbar color="accent" class="app-header">
       <div class="logo-image" routerLink=""> </div>
       <div id="writing">
@@ -13,12 +13,40 @@
     </span>
   </mat-toolbar>
 
-  <div class = "addNote">
+  <div (click)=openNoteForm() class = "addNote">
     <button mat-fab color="primary">
       <mat-icon >add</mat-icon>
   </button>
   </div>
-</div>
+
+  <div *ngIf="openForm"  class = "noteField">
+    <!-- <mat-form-field appearance = "fill">
+        <input  matInput name="note" [(ngModel)]="note" placeholder="Input your note" required> -->
+        <!-- <mat-error *ngIf="pass.invalid">{{getPasswordErrorMessage()}}</mat-error> -->
+    <!-- </mat-form-field> -->
+    <div>
+    <mat-form-field appearance="fill">
+      <textarea matInput [(ngModel)]="noteContent" [formControl]="note"
+                cdkTextareaAutosize
+                #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5" placeholder="Enter note"></textarea>
+    </mat-form-field>
+    </div>
+
+    <div class = "savebutton">
+    <a mat-raised-button type="text" (click)=addNote() color="primary" class="btn-block"><strong>Save</strong></a>
+    </div>
+
+
+    <!-- <mat-form-field appearance="fill">
+      <textarea matInput [(ngModel)]="noteContent" [formControl]="note"></textarea>
+    </mat-form-field>
+    <a mat-raised-button type="text" (click)=addNote() color="primary" class="btn-block"><strong>Save</strong></a> -->
+  </div>
+
+    
+  <!-- </div> -->
 
   <!-- <div class = "matCards"> -->
     <div class="matrow">
@@ -26,7 +54,7 @@
         <mat-card class="notecard">
           <mat-card-content>
             <mat-card-title>
-              <p>{{note.content}}</p>
+              <span>{{note.content}}</span>
             </mat-card-title>
           </mat-card-content>
           <mat-card-actions align="end">
@@ -39,7 +67,7 @@
             <button mat-fab color="primary">
                 <mat-icon >edit</mat-icon>
             </button>
-            <button mat-fab color="warn">
+            <button  (click)="deleteNote(note.id!)" mat-fab color="warn">
                 <mat-icon >delete</mat-icon>
             </button>
           </div>
@@ -51,11 +79,7 @@
 
   <!-- End of login div -->
   <!-- <div class="row"> -->
-      <mat-toolbar color="accent" class="app-footer">
-          <!-- <div class="logo-image" routerLink=""> </div> -->
-          <!-- <div id="writing">
-              <p><strong> Save Your Thoughts </strong></p>
-          </div> -->
-      </mat-toolbar>
+      <!-- <mat-toolbar color="accent" class="app-footer">
+      </mat-toolbar> -->
   <!-- </div> -->
 </div>

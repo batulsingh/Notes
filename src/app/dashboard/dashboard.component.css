@@ -1,3 +1,5 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
 
 .shift-30 {
     margin-top: 30px;
@@ -67,7 +69,7 @@
     height: 57px;
     border-radius: 50%;
     overflow: hidden;
-    margin-top: -6px;
+    margin-top: -0.1rem;
     outline: none;
     cursor: pointer;
 }
@@ -117,6 +119,10 @@ mat-card-content {
 }
 
 .notecard {
+    border-radius: 1rem;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
     background-color:whitesmoke;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -124,6 +130,10 @@ mat-card-content {
     margin-left: 1rem;
     margin-right: 2rem;
 }
+
+span {
+    word-break: break-all;
+  }
 
 .row{
     margin-top: 3rem;
@@ -137,6 +147,7 @@ mat-card-content {
 button{
     margin-top: 0.3rem;
     margin-right: 0.3rem;
+    margin-left: 0.2rem;
     /* Changes button background colour */
     /* background: #eb6b40; */
     /* color: white; */
@@ -152,11 +163,12 @@ button{
 
 .matCards{
     position: relative;
-    top: -20rem;
-    bottom: -10rem;
+    /* top: -20rem;
+    /*bottom: -10rem; */
     /* display: flex; */
     /* flex-direction: row; */
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
     /* height: 30rem; */
 }
 
@@ -166,7 +178,8 @@ button{
 }
 
 .matrow{
-    margin-top: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
 }
 
 /* mat-toolbar{
@@ -180,8 +193,31 @@ button{
   }
 
   .addNote{
-    margin-top: 1.5rem;
+    top: 4.7rem;
     right: 0.5rem;
     position: fixed;
     z-index: 3;
   }
+
+  .noteField{
+    z-index: 3;
+    position: absolute;
+    margin: auto;
+    width: fit-content;
+    right: 0;
+    left: 0;
+    top: 20;
+    background-color:ivory;
+    border-radius: 1rem;
+    border-color: black;
+    box-shadow:  0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+  .savebutton{
+    margin-left: 4.5rem;
+    display: block;
+  }
+
+  /* .container-fluid{
+    background-color: floralwhite;
+  } */

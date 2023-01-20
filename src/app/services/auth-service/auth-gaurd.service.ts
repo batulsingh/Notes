@@ -1,3 +1,4 @@
+import { HttpStatusCode } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
@@ -12,16 +13,14 @@ export class AuthGaurdService implements CanActivate {
     private authService: AuthenticationService
   ) { }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (this.authService.isUserLoggedIn()){
-      return true;
-    }else{
-      sessionStorage.removeItem("username")
-      sessionStorage.removeItem("token")
-      this.router.navigate(['login']);
-      return false;
-    }
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
+    this.authService.isUserLoggedIn().subscribe(
+      data => {
+        return data.status == HttpStatusCode.Ok
+      }
+    )
+    return true
   }
 
 }

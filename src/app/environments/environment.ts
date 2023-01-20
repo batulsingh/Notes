@@ -6,7 +6,7 @@
 
 export const environment = {
   production: true,
-//  Url:'http://localhost:8084/login'
+//  Url:'http://localhost:8084'
 
   // Url : 'http://localhost:'
 

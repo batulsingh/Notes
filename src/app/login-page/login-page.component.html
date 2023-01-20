@@ -13,14 +13,17 @@
     <!-- Start of login div -->
 
     <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
-        <mat-card class="login-box">
-            <mat-card-header>
-                <mat-card-title>Sign in to Notes</mat-card-title>
-            </mat-card-header>
 
             <form class="login-form">
-                <div class = "login-fields">
-                <mat-card-content>
+                <div class = "logintitle">
+
+                </div>
+
+                <mat-card-header>
+                    <mat-card-title>Sign in to Notes</mat-card-title>
+                </mat-card-header>
+            <div class = "login-fields">
+                
                     <div class = "form-field">
                     <mat-form-field appearance = "fill">
                         <input type="text" matInput name="username" [(ngModel)]="username" [formControl]="email" placeholder="Email" required>
@@ -30,17 +33,19 @@
                     
                     <div class = "form-field">
                     <mat-form-field appearance = "fill">
-                        <input type="password" matInput name="password" [(ngModel)]="password" [formControl]="pass" placeholder="Password" required>
+                        <input [type]="hide ? 'password' : 'text'" matInput name="password" [(ngModel)]="password" [formControl]="pass" placeholder="Password" required>
+                        <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          </button> -->
                         <mat-error *ngIf="pass.invalid">{{getPasswordErrorMessage()}}</mat-error>
                     </mat-form-field>
                     </div>
 
-                </mat-card-content>
-                <a mat-raised-button [disabled]="email.invalid || pass.invalid" (click)=checkLogin() color="primary" class="btn-block"><strong>Sign In</strong></a>
+                <a mat-raised-button [disabled]="email.invalid || pass.invalid" (click)=login() color="primary" class="btn-block"><strong>Sign In</strong></a>
                 <div id="newUserHyper">
-                    <p>New User?
+                    <p>New User ?
                         <a [routerLink]="['/register']" routerLinkActive="router-link-active">
-                            Join Now.
+                            Join Now
                         </a>
                     </p>
                     <a [routerLink]="['']" routerLinkActive="router-link-active">Forgot Password?</a>
@@ -49,7 +54,6 @@
             </div>
 
             </form>
-        </mat-card>
     </div>
 
     <!-- End of login div -->

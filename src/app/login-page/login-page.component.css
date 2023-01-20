@@ -1,4 +1,5 @@
-
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
 .shift-30 {
     margin-top: 30px;
 }
@@ -19,11 +20,15 @@
     margin-top: 8rem;
 }
 
+.logintitle{
+    height: 3rem;
+}
+
 .login-form{
+    margin-top: 5rem;
     position: relative;
     text-align: center;
-    height: 35.5rem;
-    /* background-color:cornsilk; */
+    height: 38rem;
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
 }
 
@@ -47,16 +52,6 @@
     right: 0;
     z-index: 2;
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
-}
-
-.hero {
-    margin-top: 30px;
-    position: relative;
-    height: 600px;
-    overflow: hidden;
-    background: url(../../assets/hero-cover.jpg) no-repeat center;
-    background-size: cover;
-    opacity: 0.8;
 }
 
 .container-mine {

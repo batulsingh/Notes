@@ -13,7 +13,6 @@ export class LoginPageComponent implements OnInit {
 
   username = '';
   password = '';
-  invalidLogin = false;
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email, Validators.maxLength(40)]);
   pass = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(30), this.noWhiteSpace]);
@@ -46,19 +45,15 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  checkLogin() {
-    (this.loginservice.authenticate(this.username, this.password).subscribe(
+  login() {
+    this.loginservice.authenticate(this.username, this.password).subscribe(
       data => {
-        // this.usernameService.changeusername(this.username);
-        this.router.navigate([`dashboard`]).then(null);
-        this.invalidLogin = false;
-        // sessionStorage.clear
-      },
-      error => {
-        this.invalidLogin = true;
-        // alert(error);
+        sessionStorage.setItem('username', this.username);
+         let tokenStr= 'Bearer '+ data.token;
+         sessionStorage.setItem('token', tokenStr);
+         this.router.navigate([`dashboard`]);
       }
-    ));
+    );
   }
 
 }
