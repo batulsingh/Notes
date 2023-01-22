@@ -43,6 +43,10 @@ openNoteForm(){
   this.openForm = true;
 }
 
+closeNoteForm(){
+  this.openForm = false;
+}
+
 addNote(){
   this.noteCreate.content = this.noteContent;
   this.noteService.saveNote(this.noteCreate).subscribe(

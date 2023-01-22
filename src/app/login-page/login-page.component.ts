@@ -1,13 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../services/auth-service/authentication.service';
 import {UsernameService} from "../services/username.service";
 import { AbstractControl, FormControl, ValidationErrors, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  styleUrls: ['./login-page.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginPageComponent implements OnInit {
 
@@ -20,7 +22,8 @@ export class LoginPageComponent implements OnInit {
   constructor(
     private router: Router,
     private loginservice: AuthenticationService,
-    private usernameService: UsernameService
+    private usernameService: UsernameService,
+    private snackBar: MatSnackBar
   ) {
   }
 
@@ -46,13 +49,29 @@ export class LoginPageComponent implements OnInit {
   }
 
   login() {
-    this.loginservice.authenticate(this.username, this.password).subscribe(
-      data => {
+    this.loginservice.authenticate(this.username, this.password).subscribe({
+      next: data => {
         sessionStorage.setItem('username', this.username);
          let tokenStr= 'Bearer '+ data.token;
          sessionStorage.setItem('token', tokenStr);
          this.router.navigate([`dashboard`]);
+      },
+      error: error => {
+        if(error.status == 401){
+          this.snackBar.open("Invalid Credentials", "Try again", {
+            duration: 3000,
+            panelClass: 'snackbar',
+            horizontalPosition: 'center'
+          });
+        }else if(error.status == 503 || error.status == 404 || error.status == 0){
+          this.snackBar.open("Service unavailable", "Please try later", {
+            duration: 3000,
+            panelClass: 'snackbar',
+            horizontalPosition: 'center'
+          });
+        }
       }
+    }
     );
   }
 

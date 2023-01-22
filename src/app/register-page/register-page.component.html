@@ -23,15 +23,18 @@
                 <div class = "register-fields">
                 <mat-card-content>
                     <div class = "form-field">
-                    <mat-form-field appearance = "fill">
+                    <mat-form-field style = "width: 16rem" appearance = "fill">
                         <input type="text" matInput name="username" [(ngModel)]="username" [formControl]="email" placeholder="Email" required>
                         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                     </mat-form-field>
                     </div>
                     
                     <div class = "form-field">
-                    <mat-form-field appearance = "fill">
-                        <input type="password" matInput name="password" [(ngModel)]="password" [formControl]="pass" placeholder="Password" required>
+                    <mat-form-field style = "width: 16rem" appearance = "fill">
+                        <input [type]="hide ? 'password' : 'text'" matInput name="password" [(ngModel)]="password" [formControl]="pass" placeholder="Password" required>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          </button>
                         <mat-error *ngIf="pass.invalid">{{getPasswordErrorMessage()}}</mat-error>
                     </mat-form-field>
                     </div>

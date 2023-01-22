@@ -199,9 +199,14 @@ button{
     z-index: 3;
   }
 
+  .closebutton{
+    margin-left: 0;
+    margin-right: 4rem;
+  }
+
   .noteField{
     z-index: 3;
-    position: absolute;
+    position: fixed;
     margin: auto;
     width: fit-content;
     right: 0;
@@ -214,8 +219,13 @@ button{
   }
 
   .savebutton{
-    margin-left: 4.5rem;
-    display: block;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    height: 0%;
+    align-content: center;
   }
 
   /* .container-fluid{

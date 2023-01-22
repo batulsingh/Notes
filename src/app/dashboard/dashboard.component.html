@@ -34,9 +34,14 @@
     </mat-form-field>
     </div>
 
-    <div class = "savebutton">
-    <a mat-raised-button type="text" (click)=addNote() color="primary" class="btn-block"><strong>Save</strong></a>
-    </div>
+    <div class="savebutton">
+      <button  (click)=closeNoteForm() mat-fab color="primary">
+        <mat-icon >close</mat-icon>
+    </button>
+    <button (click)=addNote() mat-fab color="primary">
+      <mat-icon >save</mat-icon>
+  </button>
+</div>
 
 
     <!-- <mat-form-field appearance="fill">
