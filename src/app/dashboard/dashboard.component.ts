@@ -18,6 +18,7 @@ export class DashboardComponent {
   ) { }
 
   username = sessionStorage.getItem("username")
+  usernameOnly = this.username?.substring(0, this.username.indexOf('@'))
   noteList: NoteResponseBody[] | undefined
   noteContent = '';
   noteCreate: NoteCreateRequestBody = {content: this.noteContent};
