@@ -71,7 +71,6 @@ addNote(){
      );
     }
   );
-  this.noteContent = ""
   } else {
     this.noteService.updateNote(this.noteCreate, this.updateNoteId).subscribe(
       note => {
