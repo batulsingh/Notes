@@ -25,6 +25,8 @@ export class DashboardComponent {
   openForm = false;
   note = new FormControl('', [Validators.required, Validators.minLength(1)]);
   noteId = -1
+  isUpdateForm = false
+  updateNoteId = -1;
 
   ngOnInit() {
   this.noteService.getNotes().subscribe(
@@ -40,8 +42,17 @@ logOut() {
   sessionStorage.removeItem('token')
 }
 
-openNoteForm(){
+openNoteForm(noteId: number){
   this.openForm = true;
+  if(noteId > 0){
+    this.noteService.getNotes().subscribe(
+      notes => {
+        this.noteContent = notes.filter((it: any) => it.id == noteId)[0].content;
+      }
+    )
+    this.isUpdateForm = true
+    this.updateNoteId = noteId
+  }
 }
 
 closeNoteForm(){
@@ -50,6 +61,7 @@ closeNoteForm(){
 
 addNote(){
   this.noteCreate.content = this.noteContent;
+  if(!this.isUpdateForm){
   this.noteService.saveNote(this.noteCreate).subscribe(
     note => {
       this.noteService.getNotes().subscribe(
@@ -59,9 +71,25 @@ addNote(){
      );
     }
   );
+  this.noteContent = ""
+  } else {
+    this.noteService.updateNote(this.noteCreate, this.updateNoteId).subscribe(
+      note => {
+        this.noteService.getNotes().subscribe(
+          (notes) => {
+          this.noteList = notes;
+       }
+       );
+      }
+    )
+    this.isUpdateForm = false;
+    this.updateNoteId = -1;
 
+  }
+  this.noteContent = ""
  this.openForm = false
 }
+
 
 deleteNote(noteId: number){
   this.noteService.deleteNote(noteId).subscribe(

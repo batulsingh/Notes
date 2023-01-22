@@ -13,7 +13,7 @@
     </span>
   </mat-toolbar>
 
-  <div (click)=openNoteForm() class = "addNote">
+  <div (click)=openNoteForm(-1) class = "addNote">
     <button mat-fab color="primary">
       <mat-icon >add</mat-icon>
   </button>
@@ -42,12 +42,6 @@
       <mat-icon >save</mat-icon>
   </button>
 </div>
-
-
-    <!-- <mat-form-field appearance="fill">
-      <textarea matInput [(ngModel)]="noteContent" [formControl]="note"></textarea>
-    </mat-form-field>
-    <a mat-raised-button type="text" (click)=addNote() color="primary" class="btn-block"><strong>Save</strong></a> -->
   </div>
 
     
@@ -69,7 +63,7 @@
               <mat-card-subtitle>{{note.createdOn | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
             </div>
             <div class = "actionbuttons">
-            <button mat-fab color="primary">
+            <button (click)="[openNoteForm(note.id!)]" mat-fab color="primary">
                 <mat-icon >edit</mat-icon>
             </button>
             <button  (click)="deleteNote(note.id!)" mat-fab color="warn">

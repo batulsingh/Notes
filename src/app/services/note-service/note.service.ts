@@ -18,6 +18,10 @@ export class NoteService {
     return this.httpClient.post<HttpResponse<any>>(this.url+'/addNote', note)
   }
 
+  public updateNote(note: NoteCreateRequestBody, noteId: number): Observable<any> {
+    return this.httpClient.put<HttpResponse<any>>(this.url+'/updateNote/'+noteId, note)
+  }
+
   public getNotes(): Observable<any> {
     return this.httpClient.get<HttpResponse<any>>(this.url+'/getNotes')
   }
