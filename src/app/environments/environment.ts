@@ -10,7 +10,7 @@ export const environment = {
 
   // Url : 'http://localhost:'
 
-  Url: 'https://auth-service.up.railway.app'
+  Url: 'https://auth-service-deployment-production.up.railway.app'
 
       // Url : 'http://localhost:'
 
